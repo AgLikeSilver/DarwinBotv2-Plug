@@ -1,12 +1,6 @@
 /*
 This is a framework for the bot used in Indie Google+.  
 Feel free to use all, or some, of this code for your own plug.dj bot.
-
-Things to do:
-1. Cap waitlist at 10 - Sufficient
-2. Monitor afk status for DJs
-3. Add a help function for users to see which commands are available
-4. GUI stuff
 */
 
 API.on(API.CHAT, parseChat);
@@ -19,13 +13,13 @@ var WAITCAP = 10;
 //Hash of facts
 //Add new users here to include them in the fact list.
 var facts = {
-malbo: [
-        'fact1',
-        'fact2'
+cat: [
+        'catfact1',
+        'catact2'
        ],
-ag:    [
-        'fact1', 
-        'fact2'
+dog:    [
+        'dogfact1', 
+        'dogfact2'
        ]
 }
 
