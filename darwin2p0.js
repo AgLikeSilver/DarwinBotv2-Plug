@@ -14,12 +14,12 @@ var WAITCAP = 10;
 //Add new users here to include them in the fact list.
 var facts = {
 cat: [
-        'catfact1',
-        'catact2'
+        'meow',
+        'cats are purrfect'
        ],
 dog:    [
-        'dogfact1', 
-        'dogfact2'
+        'woof', 
+        'snoop betrayed dogs everywhere'
        ]
 }
 
@@ -35,7 +35,7 @@ function parseChat(data) {
 
     var msg = data.message; //Just to lessen code
 
-    if (msg.match(/^-.*facts$/)) { //will probably want to separate out the '-' matching for non-commands
+    if (msg.match(/^!.*facts$/)) { //will probably want to separate out the '-' matching for non-commands
 
         var person = msg.substr(1, msg.length-6); //take the string between the '-' and 'facts'
     
