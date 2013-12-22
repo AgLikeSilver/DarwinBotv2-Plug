@@ -6,9 +6,6 @@ Feel free to use all, or some, of this code for your own plug.dj bot.
 API.on(API.CURATE_UPDATE, grab);
 API.on(API.CHAT, parseChat);
 API.on(API.VOTE_UPDATE, voteMeh);
-API.on(API.WAIT_LIST_UPDATE, capWaitList);
-
-var WAITCAP = 20;
 
 //RNG function for accessing array elements (to save code)
 function rng(array) {
