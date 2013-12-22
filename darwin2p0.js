@@ -49,6 +49,24 @@ function rng(array) {
 
 //Check incoming chat messages and do stuff and things
 function parseChat(data) {
+
+    var msg = data.message; //Just to lessen code
+
+    if (msg.match(/^!.*facts$/)) {
+
+        var person = msg.substr(1, msg.length-6); //take the string between the '!' and 'facts'
+    
+        //If the person exists, grab a fact from the array
+        if(facts.hasOwnProperty(person)){
+            var i = rng(facts[person]);
+            API.sendChat(facts[person][i]);
+        }
+        else {
+            API.sendChat('Sorry, I have no facts for ' + person + ' :(');
+        }
+    }        
+}
+
 	// STAFF COMMANDS
 
 	switch (msg) {
@@ -69,22 +87,6 @@ function parseChat(data) {
 	break;
 } 
 
-    var msg = data.message; //Just to lessen code
-
-    if (msg.match(/^!.*facts$/)) {
-
-        var person = msg.substr(1, msg.length-6); //take the string between the '!' and 'facts'
-    
-        //If the person exists, grab a fact from the array
-        if(facts.hasOwnProperty(person)){
-            var i = rng(facts[person]);
-            API.sendChat(facts[person][i]);
-        }
-        else {
-            API.sendChat('Sorry, I have no facts for ' + person + ' :(');
-        }
-    }        
-}
 
 //Grab Song
 function grab(obj) {
