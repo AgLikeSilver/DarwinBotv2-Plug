@@ -65,7 +65,6 @@ function parseChat(data) {
             API.sendChat('Sorry, I have no facts for ' + person + ' :(');
         }
     }        
-}
 
 	// STAFF COMMANDS
 
@@ -85,8 +84,8 @@ function parseChat(data) {
 	if (API.getUser(data.fromID).permission > 2) { API.sendChat('snagged!'); grab(); }
 	else { API.sendChat('You\'re not the boss of me!'); }
 	break;
-} 
-
+	} 
+}
 
 //Grab Song
 function grab(obj) {
