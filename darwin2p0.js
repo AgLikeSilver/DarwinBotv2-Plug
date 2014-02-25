@@ -130,7 +130,7 @@ malbo: ['Malbo helped build me!',
 	'Malbo prefers his PBJ sandwiches with hummus.'],
 musikitty: ['Laura is really good at trivia!', 
 	'Laura is a vegetarian, just like my catmom!', 
-	'Laura is catmom to Conley, a handsome devil like me!']
+	'Laura is catmom to Conley, a handsome devil like me!'],
 sultan: ['Sultanoswank used to get in trouble on TT a lot; the reality is just that he was just too cool for that site. The only reason he kept returning was charity - to share his awesomeness with others, so that they may too learn to be awesome!', 
 	'Sultanoswank helped make me the awesome bot who I am today. He\'s a real friendbeast!']
 }
