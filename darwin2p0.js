@@ -3,10 +3,52 @@ This is a framework for the bot used in Indie Google+.
 Feel free to use all, or some, of this code for your own plug.dj bot.
 */
 
-API.on(API.CURATE_UPDATE, grab);
-API.on(API.CHAT, parseChat);
 API.on(API.WAIT_LIST_UPDATE, djCycle);
 API.on(API.VOTE_UPDATE, voteMeh);
+API.on(API.CHAT, parseChat);
+API.on(API.CURATE_UPDATE, grab);
+
+//Lock the DJ Cycle at 15 users
+
+function djCycle(obj) {
+
+    if (obj.length < 15) { cycleEnabled(); enableCycle(); } //enable
+    else { cycleEnabled(); disableCycle(); } //disable
+    
+}
+		//Check if Dj Cycle is ON or OFF
+		function cycleEnabled() {
+			var toggle = $(".cycle-toggle");
+		 
+			return toggle.hasClass("enabled");
+		}
+		//Turn Dj Cycle ON or OFF
+		function enableCycle() {
+			var toggle = $(".cycle-toggle");
+		 
+			if(toggle.hasClass("disabled")) {
+				toggle.click();
+			}
+		}
+		function disableCycle() {
+			var toggle = $(".cycle-toggle");
+		 
+			if(toggle.hasClass("enabled")) {
+				toggle.click();
+			}
+		}
+
+/*No Meh Gusta
+This is called when somebody in the room (including you) votes. It passes an object with a user object and the vote, -1 for negative, 1 for positive. */
+
+
+function voteMeh(obj) {
+  var vote = obj.vote == 1 ? "woot" : "meh";
+	if (vote == -1){
+	API.sendChat(user.username + 'no Mehs in this room please! read room info!');
+  	API.chatLog(obj.user.username + 'mehd this song', true);
+	}
+}
 
 //Add new users here to include them in the fact list.
 
@@ -99,47 +141,5 @@ function grab(obj) {
   $(".icon-curate").click();
   $($(".curate").children(".menu").children().children()[0]).mousedown();
 	var media = API.getMedia();
-	alert(obj.user.username + " added " + media.author + " - " + media.title); 
-}
-
-//Lock the DJ Cycle at 15 users
-
-function djCycle(obj) {
-
-    if (obj.length < 15) { cycleEnabled(); enableCycle(); } //enable
-    else { cycleEnabled(); disableCycle(); } //disable
-    
-}
-		//Check if Dj Cycle is ON or OFF
-		function cycleEnabled() {
-			var toggle = $(".cycle-toggle");
-		 
-			return toggle.hasClass("enabled");
-		}
-		//Turn Dj Cycle ON or OFF
-		function enableCycle() {
-			var toggle = $(".cycle-toggle");
-		 
-			if(toggle.hasClass("disabled")) {
-				toggle.click();
-			}
-		}
-		function disableCycle() {
-			var toggle = $(".cycle-toggle");
-		 
-			if(toggle.hasClass("enabled")) {
-				toggle.click();
-			}
-		}
-
-/*No Meh Gusta
-This is called when somebody in the room (including you) votes. It passes an object with a user object and the vote, -1 for negative, 1 for positive. */
-
-
-function voteMeh(obj) {
-  var vote = obj.vote == 1 ? "woot" : "meh";
-	if (vote == -1){
-	API.sendChat(user.username + 'no Mehs in this room please! read room info!');
-  	API.chatLog(obj.user.username + 'mehd this song', true);
-	}
+	API.chatLog(obj.user.username + " added " + media.author + " - " + media.title); 
 }
