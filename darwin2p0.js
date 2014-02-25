@@ -5,7 +5,6 @@ Feel free to use all, or some, of this code for your own plug.dj bot.
 
 API.on(API.CURATE_UPDATE, grab);
 API.on(API.CHAT, parseChat);
-API.on(API.VOTE_UPDATE, voteMeh);
 
 //Add new users here to include them in the fact list.
 
@@ -77,12 +76,4 @@ function grab(obj) {
   $($(".curate").children(".menu").children().children()[0]).mousedown();
 	var media = API.getMedia();
 	alert(obj.user.username + " added " + media.author + " - " + media.title); 
-}
-
-function voteMeh(obj) {
-  var vote = obj.vote == 1 ? "woot" : "meh";
-	if (vote == -1){
-	API.sendChat(user.username + 'no Mehs in this room please! read room info!');
-  	API.chatLog(obj.user.username + 'mehd this song', true);
-	}
 }
