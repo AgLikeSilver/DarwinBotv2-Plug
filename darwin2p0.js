@@ -78,3 +78,11 @@ function grab(obj) {
 	var media = API.getMedia();
 	alert(obj.user.username + " added " + media.author + " - " + media.title); 
 }
+
+function voteMeh(obj) {
+  var vote = obj.vote == 1 ? "woot" : "meh";
+	if (vote == -1){
+	API.sendChat(user.username + 'no Mehs in this room please! read room info!');
+  	API.chatLog(obj.user.username + 'mehd this song', true);
+	}
+}
