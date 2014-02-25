@@ -140,6 +140,9 @@ function parseChat(data) {
 function grab(obj) {
   $(".icon-curate").click();
   $($(".curate").children(".menu").children().children()[0]).mousedown();
+}
+
+function callback(obj) {
 	var media = API.getMedia();
-	API.chatLog(obj.user.username + " added " + media.author + " - " + media.title); 
+	API.chatLog('obj.user.username + " added " + media.author + " - " + media.title', false); 
 }
