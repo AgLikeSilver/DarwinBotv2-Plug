@@ -193,6 +193,7 @@ function parseChat(data) {
 			'http://i.imgur.com/okZfejS.gif' ];
 	var keyword = keywords[Math.floor(Math.random()*keywords.length)];
 	API.sendChat(''+keyword+''); }
+	break;
 	
 	case "alot":
 	function(data) {
@@ -205,6 +206,7 @@ function parseChat(data) {
 			'http://1.bp.blogspot.com/_D_Z-D2tzi14/S8TflwXvTgI/AAAAAAAACxI/qgd1wYcTWV8/s320/ALOT12.png'];
 	var keyword = keywords[Math.floor(Math.random()*keywords.length)];
 	API.sendChat(''+keyword+''); }
+	break;
 	
 	case "!freakout":
 	function(data) {
@@ -219,6 +221,7 @@ function parseChat(data) {
 			'http://gifs.e-nanigans.com/Need%20Moar%20Coffee.gif'];
 	var keyword = keywords[Math.floor(Math.random()*keywords.length)];
 	API.sendChat(''+keyword+''); }
+	break;
 	
 	case "!magic8ball":
 	function(data) {
@@ -239,6 +242,7 @@ function parseChat(data) {
 			'http://24.media.tumblr.com/01bcd663c56c1cd03729adb14c142c3c/tumblr_mj0yagMLZM1qe3aixo1_500.gif' ];
 	var keyword = keywords[Math.floor(Math.random()*keywords.length)];
 	API.sendChat(''+keyword+''); }
+	break;
 	
 	case "!pet":
 	function(data) {
@@ -256,6 +260,7 @@ function parseChat(data) {
 			'http://25.media.tumblr.com/c99697ade79f5fdc1f847fee82f681a1/tumblr_mlf8zt33uq1qdlh1io1_400.gif' ];
 	var keyword = keywords[Math.floor(Math.random()*keywords.length)];
 	API.sendChat(''+keyword+''); }
+	break;
 	
 	case "!macarena":
 	function(data) {
@@ -280,6 +285,7 @@ function parseChat(data) {
 			'shimmy shimmy cocopuff!' ];
 	var keyword = keywords[Math.floor(Math.random()*keywords.length)];
 	API.sendChat(''+keyword+''); }
+	break;
 	
 	case "!protips":
 	function(data) {
@@ -313,16 +319,18 @@ function parseChat(data) {
 		'when in doubt, listen to the loudest person in the room. do the exact opposite of everything he\/she says.' ];
 	var keyword = keywords[Math.floor(Math.random()*keywords.length)];
 	API.sendChat(''+keyword+''); }
+	break;
 	
 	case "hodor":
 	function(data) {
 	var keywords = ['HODOR!', 'hodor?', 'hodor! hodor!', 'hooodoooooor' ];
-	var i = rng(keywords);
-	API.sendChat(''+i+''); }
+	var keyword = keywords[Math.floor(Math.random()*keywords.length)];
+	API.sendChat(''+keyword+''); }
+	break;
 	
 	case "!facepalm":
-	API.sendChat('http://25.media.tumblr.com/efd56a3487ba74f273e5412d8f83563a/tumblr_mp2c38n12c1sok7a0o1_400.gif'); }
-	} 
+	API.sendChat('http://25.media.tumblr.com/efd56a3487ba74f273e5412d8f83563a/tumblr_mp2c38n12c1sok7a0o1_400.gif');
+	break;
 }
 
 //Grab Song
