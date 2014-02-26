@@ -181,7 +181,7 @@ function parseChat(data) {
 	break;
 	
 // OTHER COMMANDS	
-	case "!pun":
+/*	case "!pun":
 	function(data) {
 	var keywords = ['http://i.imgur.com/zi3j0tU.gif', 
 			'http://i.imgur.com/cQQkxGt.gif', 
@@ -331,8 +331,8 @@ function parseChat(data) {
 	case "!facepalm":
 	API.sendChat('http://25.media.tumblr.com/efd56a3487ba74f273e5412d8f83563a/tumblr_mp2c38n12c1sok7a0o1_400.gif');
 	break;
-	
-	}
+	*/
+	} 
 }
 
 //Grab Song
