@@ -12,9 +12,10 @@ API.on(API.CURATE_UPDATE, grab);
 
 function djCycle(obj) {
 
-    if (obj.length < 15) { cycleEnabled(); enableCycle(); } //enable
-    else { cycleEnabled(); disableCycle(); } //disable
-    
+    if (obj.length >= 15) { cycleEnabled(); enableCycle(); } //enable
+    else { 
+    	if (obj.length <= 10) { cycleEnabled(); disableCycle(); } //disable
+    	}
 }
 		//Check if Dj Cycle is ON or OFF
 		function cycleEnabled() {
