@@ -191,8 +191,8 @@ function parseChat(data) {
 			'http://i.imgur.com/aN0gkxL.gif', 
 			'http://i.imgur.com/wm8YQEb.gif',
 			'http://i.imgur.com/okZfejS.gif' ];
-	var i = rng(keywords);
-	API.sendChat(''+i+''); }
+	var keyword = keywords[Math.floor(Math.random()*keywords.length)];
+	API.sendChat(''+keyword+''); }
 	
 	case "alot":
 	function(data) {
@@ -203,8 +203,8 @@ function parseChat(data) {
 			'http://2.bp.blogspot.com/_D_Z-D2tzi14/S8TiTtIFjpI/AAAAAAAACxQ/HXLdiZZ0goU/s1600/ALOT14.png', 
 			'http://s3.amazonaws.com/theoatmeal-img/comics/oatmeal_day/alot.png', 
 			'http://1.bp.blogspot.com/_D_Z-D2tzi14/S8TflwXvTgI/AAAAAAAACxI/qgd1wYcTWV8/s320/ALOT12.png'];
-	var i = rng(keywords);
-	API.sendChat(''+i+''); }
+	var keyword = keywords[Math.floor(Math.random()*keywords.length)];
+	API.sendChat(''+keyword+''); }
 	
 	case "!freakout":
 	function(data) {
@@ -217,8 +217,8 @@ function parseChat(data) {
 			'http://i.imgur.com/QLdCn.gif',
 			'http://25.media.tumblr.com/tumblr_m301feBjlr1r5kyvmo3_250.gif',
 			'http://gifs.e-nanigans.com/Need%20Moar%20Coffee.gif'];
-	var i = rng(keywords);
-	API.sendChat(''+i+''); }
+	var keyword = keywords[Math.floor(Math.random()*keywords.length)];
+	API.sendChat(''+keyword+''); }
 	
 	case "!magic8ball":
 	function(data) {
@@ -237,8 +237,8 @@ function parseChat(data) {
 			'http://i.imgur.com/WHhRGdC.gif',
 			'http://i.imgur.com/EEarzy4.gif',
 			'http://24.media.tumblr.com/01bcd663c56c1cd03729adb14c142c3c/tumblr_mj0yagMLZM1qe3aixo1_500.gif' ];
-	var i = rng(keywords);
-	API.sendChat(''+i+''); }
+	var keyword = keywords[Math.floor(Math.random()*keywords.length)];
+	API.sendChat(''+keyword+''); }
 	
 	case "!pet":
 	function(data) {
@@ -254,8 +254,8 @@ function parseChat(data) {
 			'http://i.imgur.com/JfaEzmJ.gif',
 			'http://25.media.tumblr.com/9a6f79435b246cdd5fd2e0894a5cb41a/tumblr_mpcirm5Riv1svakfso1_400.gif',,
 			'http://25.media.tumblr.com/c99697ade79f5fdc1f847fee82f681a1/tumblr_mlf8zt33uq1qdlh1io1_400.gif' ];
-	var i = rng(keywords);
-	API.sendChat(''+i+''); }
+	var keyword = keywords[Math.floor(Math.random()*keywords.length)];
+	API.sendChat(''+keyword+''); }
 	
 	case "!macarena":
 	function(data) {
@@ -278,8 +278,8 @@ function parseChat(data) {
 			'http://cdn0.dailydot.com/uploaded/images/original/2012/7/8/fivedeadlines.gif',
 			'eyyyy, macarena!!',
 			'shimmy shimmy cocopuff!' ];
-	var i = rng(keywords);
-	API.sendChat(''+i+''); }
+	var keyword = keywords[Math.floor(Math.random()*keywords.length)];
+	API.sendChat(''+keyword+''); }
 	
 	case "!protips":
 	function(data) {
@@ -311,8 +311,8 @@ function parseChat(data) {
 		'when swinging a kettlebell, the bell should never go below your knees.', 
 		'nothing \'writes itself\'.', 
 		'when in doubt, listen to the loudest person in the room. do the exact opposite of everything he\/she says.' ];
-	var i = rng(keywords);
-	API.sendChat(''+i+''); }
+	var keyword = keywords[Math.floor(Math.random()*keywords.length)];
+	API.sendChat(''+keyword+''); }
 	
 	case "hodor":
 	function(data) {
