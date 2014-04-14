@@ -40,13 +40,11 @@ function djCycle(obj) {
 		}
 
 /*No Meh Gusta
-This is called when somebody in the room (including you) votes. It passes an object with a user object and the vote, -1 for negative, 1 for positive. */
-
-
+Darwin frowns on negative votes (obj.vote == -1)
+*/
 function voteMeh(obj) {
-  var vote = obj.vote == 1 ? "woot" : "meh";
-	if (vote == -1){
-	API.sendChat(user.username + 'no Mehs in this room please! read room info!');
+  if (obj.vote == -1){
+	API.sendChat(obj.user.username + 'no Mehs in this room please! read room info!');
   	API.chatLog(obj.user.username + 'mehd this song', true);
 	}
 }
